@@ -4,7 +4,7 @@
 
 Determine the profile of the memory image:
 
-vol.py -f <Memory Image File> imageinfo
+`vol.py -f <Memory Image File> imageinfo`
 
 shell
 Copy code
