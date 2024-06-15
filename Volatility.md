@@ -1,67 +1,52 @@
 ## Volatility Commands
 
 ### 1. Identify the Memory Image Profile
-
 Determine the profile of the memory image:
-
 ```
 vol.py -f <Memory Image File> imageinfo
 ```
 
 ### 2. Network Connections
-
 List network connections:
-
+```
 vol.py -f ../memory.raw --profile=Win2012R2x64_18340 netscan
-
-
+```
 
 ### 3. List Processes
-
 List all running processes:
-
+```
 vol.py -f memory.raw --profile=Win2012R2x64_18340 pslist
-
-
+```
 
 ### 4. Process Tree
-
 Display the process tree:
-
+```
 vol.py -f memory.raw --profile=Win2012R2x64_18340 pstree
-
-
+```
 
 ### 5. DLL List
-
 List DLLs loaded by a specific process:
-
+```
 vol.py -f memory.raw --profile=Win2012R2x64_18340 dlllist --pid <process id>
-
-
+```
 
 ### 6. Handles
-
 List the handles opened by a specific process:
-
+```
 vol.py -f memory.raw --profile=Win2012R2x64_18340 handles --pid <process id>
-
-
+```
 
 ### 7. Malfind
-
 Scan for suspicious or hidden processes:
-
+```
 vol.py -f memory.raw --profile=Win2012R2x64_18340 malfind
-
-
+```
 
 ### 8. Process Dump
-
 Dump the memory of a specific process:
-
+```
 vol.py -f memory.raw --profile=Win2012R2x64_18340 procdump --pid <process id> --dump-dir process_dump
-
+```
 
 
 ## Explanation of Commands
