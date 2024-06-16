@@ -9,50 +9,78 @@ vol.py -f <Memory Image File> imageinfo
 ### 2. Network Connections
 List network connections:
 ```
-vol.py -f ../memory.raw --profile=Win10x64_19041 netscan
+vol2
+vol.py -f <memory_image> --profile=Win10x64_19041 netscan
+
+vol3
+vol.py -f <memory_image> windows.netscan
 ```
 
 ### 3. List Processes
 List all running processes:
 ```
-vol.py -f memory.raw --profile=Win10x64_19041 pslist
+vol2
+vol.py -f <memory_image> --profile=Win10x64_19041 pslist
+
+vol3
+vol.py -f <memory_image> windows.pslist
 ```
 
 ### 4. List Processes - Includes terminated or hidden 
 List all running processes:
 ```
-vol.py -f memory.raw --profile=Win10x64_19041 pslist
+vol2
+vol.py -f <memory_image> --profile=Win10x64_19041 psscan
+
+vol3
+vol.py -f <memory_image> windows.psscan
 ```
 
 ### 5. Process Tree
 Display the process tree:
 ```
-vol.py -f memory.raw --profile=Win10x64_19041 pstree
+vol2
+vol.py -f <memory_image> --profile=Win10x64_19041 pstree
+
+vol3
+vol.py -f <memory_image> windows.pstree
 ```
 
 ### 6. DLL List
 List DLLs loaded by a specific process:
 ```
-vol.py -f memory.raw --profile=Win10x64_190410 dlllist --pid <process id>
+vol2
+vol.py -f <memory_image> --profile=Win10x64_190410 dlllist --pid <process id>
+
+vol3
+vol.py -f <memory_image> windows.dlllist --pid <process id>
 ```
 
 ### 7. Handles
 List the handles opened by a specific process:
 ```
-vol.py -f memory.raw --profile=Win10x64_19041 handles --pid <process id>
+vol2
+vol.py -f <memory_image> --profile=Win10x64_19041 handles --pid <process id>
+
+vol3
+vol.py -f <memory_image> windows.handles --pid <process id>
 ```
 
 ### 8. Malfind
 Scan for suspicious or hidden processes:
 ```
-vol.py -f memory.raw --profile=Win10x64_19041 malfind
+vol2
+vol.py -f <memory_image> --profile=Win10x64_19041 malfind
+
+vol3
+vol.py -f <memory_image> windows.malfind
 ```
 
 ### 9. Process Dump
 Dump the memory of a specific process:
 ```
 vol2
-vol.py -f memory.raw --profile=Win10x64_19041 procdump --pid <process id> --dump-dir process_dump
+vol.py -f <memory_image> --profile=Win10x64_19041 procdump --pid <process id> --dump-dir process_dump
 
 vol3
 vol.py -f <memory_image> -o <directory_output> windows.dumpfiles --pid <process id>
