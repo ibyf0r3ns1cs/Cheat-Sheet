@@ -18,31 +18,37 @@ List all running processes:
 vol.py -f memory.raw --profile=Win10x64_19041 pslist
 ```
 
-### 4. Process Tree
+### 4. List Processes - Includes terminated or hidden 
+List all running processes:
+```
+vol.py -f memory.raw --profile=Win10x64_19041 pslist
+```
+
+### 5. Process Tree
 Display the process tree:
 ```
 vol.py -f memory.raw --profile=Win10x64_19041 pstree
 ```
 
-### 5. DLL List
+### 6. DLL List
 List DLLs loaded by a specific process:
 ```
 vol.py -f memory.raw --profile=Win10x64_190410 dlllist --pid <process id>
 ```
 
-### 6. Handles
+### 7. Handles
 List the handles opened by a specific process:
 ```
 vol.py -f memory.raw --profile=Win10x64_19041 handles --pid <process id>
 ```
 
-### 7. Malfind
+### 8. Malfind
 Scan for suspicious or hidden processes:
 ```
 vol.py -f memory.raw --profile=Win10x64_19041 malfind
 ```
 
-### 8. Process Dump
+### 9. Process Dump
 Dump the memory of a specific process:
 ```
 vol.py -f memory.raw --profile=Win10x64_19041 procdump --pid <process id> --dump-dir process_dump
@@ -54,6 +60,7 @@ vol.py -f memory.raw --profile=Win10x64_19041 procdump --pid <process id> --dump
 - **imageinfo**: Identifies the operating system profile to use with the memory image.
 - **netscan**: Lists network connections, showing active connections and listening ports.
 - **pslist**: Displays a list of all running processes in the memory image.
+- **psscan**: Displays a list of all running and terminated processes in the memory image.
 - **pstree**: Shows the hierarchical structure of processes, displaying parent-child relationships.
 - **dlllist**: Lists the DLLs loaded by a specified process, which can help identify injected or malicious DLLs.
 - **handles**: Lists the handles opened by a specified process, useful for identifying resources in use by a process.
