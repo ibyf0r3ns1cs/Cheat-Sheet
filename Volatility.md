@@ -3,7 +3,12 @@
 ### 1. Identify the Memory Image Profile
 Determine the profile of the memory image:
 ```
+vol2
 vol.py -f <Memory Image File> imageinfo
+
+vol3
+vol.py -f <Memory Image File> windows.info
+
 ```
 
 ### 2. Network Connections
