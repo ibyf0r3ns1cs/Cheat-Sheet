@@ -9,43 +9,43 @@ vol.py -f <Memory Image File> imageinfo
 ### 2. Network Connections
 List network connections:
 ```
-vol.py -f ../memory.raw --profile=Win2012R2x64_18340 netscan
+vol.py -f ../memory.raw --profile=Win10x64_19041 netscan
 ```
 
 ### 3. List Processes
 List all running processes:
 ```
-vol.py -f memory.raw --profile=Win2012R2x64_18340 pslist
+vol.py -f memory.raw --profile=Win10x64_19041 pslist
 ```
 
 ### 4. Process Tree
 Display the process tree:
 ```
-vol.py -f memory.raw --profile=Win2012R2x64_18340 pstree
+vol.py -f memory.raw --profile=Win10x64_19041 pstree
 ```
 
 ### 5. DLL List
 List DLLs loaded by a specific process:
 ```
-vol.py -f memory.raw --profile=Win2012R2x64_18340 dlllist --pid <process id>
+vol.py -f memory.raw --profile=Win10x64_190410 dlllist --pid <process id>
 ```
 
 ### 6. Handles
 List the handles opened by a specific process:
 ```
-vol.py -f memory.raw --profile=Win2012R2x64_18340 handles --pid <process id>
+vol.py -f memory.raw --profile=Win10x64_19041 handles --pid <process id>
 ```
 
 ### 7. Malfind
 Scan for suspicious or hidden processes:
 ```
-vol.py -f memory.raw --profile=Win2012R2x64_18340 malfind
+vol.py -f memory.raw --profile=Win10x64_19041 malfind
 ```
 
 ### 8. Process Dump
 Dump the memory of a specific process:
 ```
-vol.py -f memory.raw --profile=Win2012R2x64_18340 procdump --pid <process id> --dump-dir process_dump
+vol.py -f memory.raw --profile=Win10x64_19041 procdump --pid <process id> --dump-dir process_dump
 ```
 
 
