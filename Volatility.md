@@ -52,6 +52,7 @@ vol.py -f memory.raw --profile=Win10x64_19041 malfind
 Dump the memory of a specific process:
 ```
 vol.py -f memory.raw --profile=Win10x64_19041 procdump --pid <process id> --dump-dir process_dump
+vol.py -f <memory_image> -o <directory_output> windows.dumpfiles --pid <process id>
 ```
 
 
